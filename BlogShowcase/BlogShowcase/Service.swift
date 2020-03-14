@@ -27,6 +27,27 @@ struct Result: Decodable {
     var collectionName: String?
 }
 
+protocol ResultViewData {
+    var title: String { get }
+    var subtitle: String { get }
+    var albumCoverURL: URL? { get }
+}
+
+
+extension Result: ResultViewData {
+    var title: String {
+        return trackName
+    }
+
+    var subtitle: String {
+        return "\(artistName ?? "") • \(collectionName ?? "")"
+    }
+
+    var albumCoverURL: URL? {
+        return URL(string: artworkUrl100)
+    }
+}
+
 class Service {
     static var shared = Service()
 

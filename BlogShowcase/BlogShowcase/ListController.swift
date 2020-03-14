@@ -28,8 +28,18 @@ class ListCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-
 }
+
+extension ListCell {
+    func configure(viewData: ResultViewData) {
+        self.nameLabel.text = viewData.title
+        self.subtitleLabel.text = viewData.subtitle
+        if let url = viewData.albumCoverURL {
+            Nuke.loadImage(with: url, into: self.imageView)
+        }
+    }
+}
+
 
 class LoadingFooter: UICollectionReusableView {
 
@@ -109,15 +119,7 @@ class ListController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ListCell
 
         let track = results[indexPath.item]
-
-        cell.nameLabel.text = track.trackName
-        if let url = URL(string: track.artworkUrl100) {
-            Nuke.loadImage(with: url, into: cell.imageView)
-        }
-
-        //cell.imageView.sd_setImage(with: URL(string: track.artworkUrl100))
-        cell.subtitleLabel.text = "\(track.artistName ?? "") • \(track.collectionName ?? "")"
-
+        cell.configure(viewData: track)
         // initiate pagination
         if indexPath.item == results.count - 1 && !isPaginating {
             print("fetch more data")
