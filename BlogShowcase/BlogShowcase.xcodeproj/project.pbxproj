@@ -16,6 +16,13 @@
 		730478F7241D5A73002AFD82 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 730478F6241D5A73002AFD82 /* Nuke */; };
 		730478F9241D5B48002AFD82 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478F8241D5B48002AFD82 /* Service.swift */; };
 		730478FB241D5CE2002AFD82 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FA241D5CE2002AFD82 /* ListController.swift */; };
+		73047903241F62E0002AFD82 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FD241F62DF002AFD82 /* Extensions.swift */; };
+		73047904241F62E0002AFD82 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FE241F62DF002AFD82 /* Cell.swift */; };
+		73047905241F62E0002AFD82 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FF241F62DF002AFD82 /* State.swift */; };
+		73047906241F62E0002AFD82 /* Reloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73047900241F62DF002AFD82 /* Reloader.swift */; };
+		73047907241F62E0002AFD82 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73047901241F62E0002AFD82 /* ForEach.swift */; };
+		73047908241F62E0002AFD82 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73047902241F62E0002AFD82 /* DataSource.swift */; };
+		7304790B241F6352002AFD82 /* DeepDiff in Frameworks */ = {isa = PBXBuildFile; productRef = 7304790A241F6352002AFD82 /* DeepDiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,12 @@
 		730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseViewData.swift; sourceTree = "<group>"; };
 		730478F8241D5B48002AFD82 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		730478FA241D5CE2002AFD82 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		730478FD241F62DF002AFD82 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		730478FE241F62DF002AFD82 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		730478FF241F62DF002AFD82 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		73047900241F62DF002AFD82 /* Reloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reloader.swift; sourceTree = "<group>"; };
+		73047901241F62E0002AFD82 /* ForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
+		73047902241F62E0002AFD82 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +50,7 @@
 				730478F7241D5A73002AFD82 /* Nuke in Frameworks */,
 				730478EF241D5495002AFD82 /* ShowcaseKit in Frameworks */,
 				730478F4241D571F002AFD82 /* LBTATools in Frameworks */,
+				7304790B241F6352002AFD82 /* DeepDiff in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,7 @@
 		730478D8241D5466002AFD82 /* BlogShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				730478FC241F6275002AFD82 /* Micro */,
 				730478D9241D5466002AFD82 /* AppDelegate.swift */,
 				730478E2241D5467002AFD82 /* Assets.xcassets */,
 				730478E4241D5467002AFD82 /* LaunchScreen.storyboard */,
@@ -71,6 +86,19 @@
 				730478FA241D5CE2002AFD82 /* ListController.swift */,
 			);
 			path = BlogShowcase;
+			sourceTree = "<group>";
+		};
+		730478FC241F6275002AFD82 /* Micro */ = {
+			isa = PBXGroup;
+			children = (
+				730478FE241F62DF002AFD82 /* Cell.swift */,
+				73047902241F62E0002AFD82 /* DataSource.swift */,
+				730478FD241F62DF002AFD82 /* Extensions.swift */,
+				73047901241F62E0002AFD82 /* ForEach.swift */,
+				73047900241F62DF002AFD82 /* Reloader.swift */,
+				730478FF241F62DF002AFD82 /* State.swift */,
+			);
+			path = Micro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +121,7 @@
 				730478EE241D5495002AFD82 /* ShowcaseKit */,
 				730478F3241D571F002AFD82 /* LBTATools */,
 				730478F6241D5A73002AFD82 /* Nuke */,
+				7304790A241F6352002AFD82 /* DeepDiff */,
 			);
 			productName = BlogShowcase;
 			productReference = 730478D6241D5466002AFD82 /* BlogShowcase.app */;
@@ -126,6 +155,7 @@
 				730478ED241D5495002AFD82 /* XCRemoteSwiftPackageReference "ShowcaseKit" */,
 				730478F2241D571F002AFD82 /* XCRemoteSwiftPackageReference "LBTATools" */,
 				730478F5241D5A73002AFD82 /* XCRemoteSwiftPackageReference "Nuke" */,
+				73047909241F6352002AFD82 /* XCRemoteSwiftPackageReference "DeepDiff" */,
 			);
 			productRefGroup = 730478D7241D5466002AFD82 /* Products */;
 			projectDirPath = "";
@@ -153,10 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73047903241F62E0002AFD82 /* Extensions.swift in Sources */,
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
+				73047907241F62E0002AFD82 /* ForEach.swift in Sources */,
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
+				73047905241F62E0002AFD82 /* State.swift in Sources */,
+				73047904241F62E0002AFD82 /* Cell.swift in Sources */,
+				73047908241F62E0002AFD82 /* DataSource.swift in Sources */,
+				73047906241F62E0002AFD82 /* Reloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +406,14 @@
 				minimumVersion = 8.4.0;
 			};
 		};
+		73047909241F6352002AFD82 /* XCRemoteSwiftPackageReference "DeepDiff" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onmyway133/DeepDiff.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -387,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 730478F5241D5A73002AFD82 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		7304790A241F6352002AFD82 /* DeepDiff */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73047909241F6352002AFD82 /* XCRemoteSwiftPackageReference "DeepDiff" */;
+			productName = DeepDiff;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
