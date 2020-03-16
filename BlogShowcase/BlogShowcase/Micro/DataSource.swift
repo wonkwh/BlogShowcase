@@ -3,7 +3,7 @@
 //  Micro
 //
 //  Created by khoa on 08/02/2020.
-//
+//  fixed emptyView and pagination by kwanghyun.won
 
 import UIKit
 
@@ -11,9 +11,19 @@ open class DataSource: NSObject {
     private var cellRegister: Set<String> = Set()
     internal var trueState: State = .init()
     public weak var collectionView: UICollectionView?
+    public var emptyStateLabel: UILabel = {
+        let label = UILabel()
+        label.text = "please enter the search term..."
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.isHidden = true
+        return label
+    }()
+
 
     public init(collectionView: UICollectionView) {
         self.collectionView = collectionView
+        self.collectionView?.addSubview(self.emptyStateLabel)
+        self.emptyStateLabel.centerInSuperview()
     }
 
     public var state: State {
@@ -58,6 +68,7 @@ extension DataSource: UICollectionViewDataSource {
     }
 
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        emptyStateLabel.isHidden = state.models.count > 0 ? true : false
         return state.models.count
     }
 
@@ -67,6 +78,12 @@ extension DataSource: UICollectionViewDataSource {
     ) -> UICollectionViewCell {
         let observer = state.observers[safe: indexPath.item]
         let context = Context(collectionView: collectionView, indexPath: indexPath)
+
+        // FIXME - pagination
+        if indexPath.item == state.models.count - 5 {
+            observer?.onNextPage(context)
+        }
+
         return observer?.onConfigure(context, self) ?? UICollectionViewCell()
     }
 }

@@ -9,17 +9,27 @@
 import UIKit
 import LBTATools
 import Nuke
+import SkeletonView
 
 class ListCell: UICollectionViewCell {
     let imageView = AspectFitImageView(image: nil, cornerRadius: 16)
-    let nameLabel = UILabel(text: "TrackName", font: .boldSystemFont(ofSize: 18))
+    let nameLabel: UILabel = {
+        let view = UILabel(text: "TrackName", font: .boldSystemFont(ofSize: 18))
+        view.isSkeletonable = true
+        return view
+    }()
+
     let subtitleLabel = UILabel(text: "Subtitle Label", font: .systemFont(ofSize: 16), numberOfLines: 2)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        [imageView, nameLabel, subtitleLabel].forEach { view in
+            view.isSkeletonable = true
+        }
+
         hstack(
-            imageView.withWidth(80),
+            imageView.withSize(.init(width: 80, height: 80)),
             stack(nameLabel, subtitleLabel, spacing: 4),
             spacing: 16
         ).withMargins(.allSides(16))
@@ -72,9 +82,14 @@ class ListController: UICollectionViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         collectionView.backgroundColor = .white
 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.shouldAnimate = false
+
+            self.collectionView.reloadData()
+        }
+
         collectionView.register(ListCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(LoadingFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerId)
-
         fetchData()
     }
 
@@ -114,12 +129,19 @@ class ListController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     var isPaginating = false
     var isDonePaginating = false
+    var shouldAnimate = true
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ListCell
 
-        let track = results[indexPath.item]
-        cell.configure(viewData: track)
+        if shouldAnimate {
+            cell.showAnimatedGradientSkeleton()
+        } else {
+            let track = results[indexPath.item]
+            cell.configure(viewData: track)
+            cell.hideSkeleton()
+        }
+
         // initiate pagination
         if indexPath.item == results.count - 1 && !isPaginating {
             print("fetch more data")
@@ -157,3 +179,8 @@ class ListController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
 }
 
+extension ListController: SkeletonCollectionViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return cellId
+    }
+}

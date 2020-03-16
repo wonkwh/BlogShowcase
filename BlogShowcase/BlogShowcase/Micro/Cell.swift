@@ -26,6 +26,16 @@ public struct Cell<C: UICollectionViewCell>: ObserverOwner {
         }
     }
 
+    public func onNextPage(_ closure: @escaping (Context) -> Void) -> Self {
+        observer.onNextPage = closure
+        return self
+    }
+
+    public func onPreviousPage(_ closure: @escaping (Context) -> Void) -> Self {
+        observer.onPreviousPage = closure
+        return self
+    }
+
     public func onShouldSelect(_ closure: @escaping (Context) -> Bool) -> Self {
         observer.onShouldSelect = closure
         return self
@@ -87,6 +97,8 @@ public struct Context {
 
 public class Observer {
     public var onConfigure: (Context, DataSource) -> UICollectionViewCell? = { _, _ in nil }
+    public var onNextPage: (Context) -> Void = { _ in }
+    public var onPreviousPage: (Context) -> Void = { _ in }
     public var onShouldSelect: (Context) -> Bool = { _ in true }
     public var onSelect: (Context) -> Void = { _ in }
     public var onDeselect: (Context) -> Void = { _ in }
