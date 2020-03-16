@@ -139,4 +139,16 @@ extension DataSource: UICollectionViewDelegateFlowLayout {
         let context = Context(collectionView: collectionView, indexPath: indexPath)
         return observer?.onSize(context) ?? .zero
     }
+
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        let observer = state.observers[safe: 0]
+        let context = Context(collectionView: collectionView, indexPath: IndexPath(item: 0, section: section))
+        return observer?.onFooterSize(context) ?? .zero
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let observer = state.observers[safe: 0]
+        let context = Context(collectionView: collectionView, indexPath: IndexPath(item: 0, section: section))
+        return observer?.onHeaderSize(context) ?? .zero
+    }
 }

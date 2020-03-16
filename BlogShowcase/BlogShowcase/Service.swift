@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import DeepDiff
 
 struct SearchResult: Decodable {
     let resultCount: Int
     let results: [Result]
 }
 
-struct Result: Decodable {
+struct Result: Decodable, Hashable, DiffAware {
     let trackId: Int
     let trackName: String
     let primaryGenreName: String

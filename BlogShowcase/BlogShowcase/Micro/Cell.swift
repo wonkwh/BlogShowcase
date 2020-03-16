@@ -46,6 +46,16 @@ public struct Cell<C: UICollectionViewCell>: ObserverOwner {
         return self
     }
 
+    public func onFooterSize(_ closure: @escaping (Context) -> CGSize) -> Self {
+        observer.onFooterSize = closure
+        return self
+    }
+
+    public func onHeaderSize(_ closure: @escaping (Context) -> CGSize) -> Self {
+        observer.onHeaderSize = closure
+        return self
+    }
+
     public func onShouldHighlight(_ closure: @escaping (Context) -> Bool) -> Self {
         observer.onShouldHighlight = closure
         return self
@@ -81,6 +91,8 @@ public class Observer {
     public var onSelect: (Context) -> Void = { _ in }
     public var onDeselect: (Context) -> Void = { _ in }
     public var onSize: (Context) -> CGSize = { _ in .zero }
+    public var onFooterSize: (Context) -> CGSize = { _ in .zero }
+    public var onHeaderSize: (Context) -> CGSize = { _ in .zero }
     public var onShouldHighlight: (Context) -> Bool = { _ in true }
     public var onWillDisplay: (Context, UICollectionViewCell) -> Void = { _, _ in }
     public var onDidEndDisplay: (Context, UICollectionViewCell) -> Void = { _, _ in }

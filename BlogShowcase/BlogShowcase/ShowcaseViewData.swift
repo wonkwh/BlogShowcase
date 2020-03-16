@@ -15,8 +15,8 @@ class ShowcaseViewData: Showcase {
     }
 }
 
-
-
-
-
-
+class ShowcaseMicroList: Showcase {
+    func makeViewController() -> UIViewController {
+        return MicroListController()
+    }
+}
