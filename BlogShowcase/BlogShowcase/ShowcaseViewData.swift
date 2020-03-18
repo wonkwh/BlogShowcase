@@ -20,3 +20,9 @@ class ShowcaseMicroList: Showcase {
         return MicroListController()
     }
 }
+
+class ShowcaseForumList: Showcase {
+    func makeViewController() -> UIViewController {
+        return ForumPostListController()
+    }
+}
