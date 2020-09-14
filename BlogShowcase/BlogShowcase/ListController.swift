@@ -98,6 +98,11 @@ class ListController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
     }
 
+    fileprivate func fetchDataNetworkLayer() {
+        let client = Client<ITunesApiRoute>()
+        let publisher = client.request(SearchResult.self, from: .searchResult)
+    }
+
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath)
         return footer

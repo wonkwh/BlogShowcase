@@ -15,6 +15,12 @@ class ShowcaseViewData: Showcase {
     }
 }
 
+class ShowcaseNetworkLayer: Showcase {
+    func makeViewController() -> UIViewController {
+        return ListController(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+}
+
 
 
 
