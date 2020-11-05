@@ -37,6 +37,8 @@ class ChatListController: UIViewController {
     }()
 
     var results = [Result]()
+    var isPaginating = false
+    var isDonePaginating = false
 
     fileprivate func fetchSamleData() {
         let urlString = "https://itunes.apple.com/search?term=IU&offset=0&limit=20"
@@ -91,11 +93,13 @@ extension ChatListController: UICollectionViewDataSource {
         return results.count
     }
 
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChatCellId", for: indexPath) as! ListCell
 
         let track = results[indexPath.item]
         cell.configure(viewData: track)
+
         return cell
     }
 
@@ -105,6 +109,37 @@ extension ChatListController: UICollectionViewDataSource {
     }
 }
 
+
+extension ChatListController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= -scrollView.adjustedContentInset.top + scrollView.bounds.height {
+            loadPreviousMessages()
+        }
+    }
+
+    func loadPreviousMessages() {
+        isPaginating = true
+
+        let urlString = "https://itunes.apple.com/search?term=IU&offset=\(results.count)&limit=20"
+        Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: SearchResult?, err) in
+
+            if let err = err {
+                print("Failed to paginate data:", err)
+                return
+            }
+
+            if searchResult?.results.count == 0 {
+                self.isDonePaginating = true
+            }
+
+            self.results += searchResult?.results ?? []
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            self.isPaginating = false
+        }
+    }
+}
 
 // MARK: - ChatLayoutDelegate
 extension ChatListController: ChatLayoutDelegate {
