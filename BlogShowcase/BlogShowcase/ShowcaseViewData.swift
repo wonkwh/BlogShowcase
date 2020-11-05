@@ -15,6 +15,12 @@ class ShowcaseViewData: Showcase {
     }
 }
 
+class ShowcaseChatLayout: Showcase {
+    func makeViewController() -> UIViewController {
+        return ChatListController()
+    }
+}
+
 
 
 

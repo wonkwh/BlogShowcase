@@ -16,7 +16,27 @@
 		730478F7241D5A73002AFD82 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 730478F6241D5A73002AFD82 /* Nuke */; };
 		730478F9241D5B48002AFD82 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478F8241D5B48002AFD82 /* Service.swift */; };
 		730478FB241D5CE2002AFD82 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FA241D5CE2002AFD82 /* ListController.swift */; };
+		734B67702553E7B10012F5CF /* ChatLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 734B676F2553E7B10012F5CF /* ChatLayout */; };
+		734B67732553E90D0012F5CF /* ChatListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B67722553E90D0012F5CF /* ChatListController.swift */; };
+		734B677F255408080012F5CF /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
+		734B6780255408080012F5CF /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		734B6783255424B50012F5CF /* FPSCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B6782255424B50012F5CF /* FPSCounter.swift */; };
+		734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B6784255425330012F5CF /* FPSStatusBarViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		734B6781255408080012F5CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				734B6780255408080012F5CF /* WoodPeckeriOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		730478D6241D5466002AFD82 /* BlogShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +47,10 @@
 		730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseViewData.swift; sourceTree = "<group>"; };
 		730478F8241D5B48002AFD82 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		730478FA241D5CE2002AFD82 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		734B67722553E90D0012F5CF /* ChatListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListController.swift; sourceTree = "<group>"; };
+		734B677C255407D40012F5CF /* WoodPeckeriOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WoodPeckeriOS.framework; sourceTree = "<group>"; };
+		734B6782255424B50012F5CF /* FPSCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSCounter.swift; sourceTree = "<group>"; };
+		734B6784255425330012F5CF /* FPSStatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSStatusBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,8 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734B67702553E7B10012F5CF /* ChatLayout in Frameworks */,
 				730478F7241D5A73002AFD82 /* Nuke in Frameworks */,
 				730478EF241D5495002AFD82 /* ShowcaseKit in Frameworks */,
+				734B677F255408080012F5CF /* WoodPeckeriOS.framework in Frameworks */,
 				730478F4241D571F002AFD82 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +72,7 @@
 		730478CD241D5466002AFD82 = {
 			isa = PBXGroup;
 			children = (
+				734B677C255407D40012F5CF /* WoodPeckeriOS.framework */,
 				730478D8241D5466002AFD82 /* BlogShowcase */,
 				730478D7241D5466002AFD82 /* Products */,
 			);
@@ -62,6 +89,8 @@
 		730478D8241D5466002AFD82 /* BlogShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				734B6784255425330012F5CF /* FPSStatusBarViewController.swift */,
+				734B6782255424B50012F5CF /* FPSCounter.swift */,
 				730478D9241D5466002AFD82 /* AppDelegate.swift */,
 				730478E2241D5467002AFD82 /* Assets.xcassets */,
 				730478E4241D5467002AFD82 /* LaunchScreen.storyboard */,
@@ -69,6 +98,7 @@
 				730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */,
 				730478F8241D5B48002AFD82 /* Service.swift */,
 				730478FA241D5CE2002AFD82 /* ListController.swift */,
+				734B67722553E90D0012F5CF /* ChatListController.swift */,
 			);
 			path = BlogShowcase;
 			sourceTree = "<group>";
@@ -83,6 +113,7 @@
 				730478D2241D5466002AFD82 /* Sources */,
 				730478D3241D5466002AFD82 /* Frameworks */,
 				730478D4241D5466002AFD82 /* Resources */,
+				734B6781255408080012F5CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +124,7 @@
 				730478EE241D5495002AFD82 /* ShowcaseKit */,
 				730478F3241D571F002AFD82 /* LBTATools */,
 				730478F6241D5A73002AFD82 /* Nuke */,
+				734B676F2553E7B10012F5CF /* ChatLayout */,
 			);
 			productName = BlogShowcase;
 			productReference = 730478D6241D5466002AFD82 /* BlogShowcase.app */;
@@ -126,6 +158,7 @@
 				730478ED241D5495002AFD82 /* XCRemoteSwiftPackageReference "ShowcaseKit" */,
 				730478F2241D571F002AFD82 /* XCRemoteSwiftPackageReference "LBTATools" */,
 				730478F5241D5A73002AFD82 /* XCRemoteSwiftPackageReference "Nuke" */,
+				734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */,
 			);
 			productRefGroup = 730478D7241D5466002AFD82 /* Products */;
 			projectDirPath = "";
@@ -156,6 +189,9 @@
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
+				734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */,
+				734B67732553E90D0012F5CF /* ChatListController.swift in Sources */,
+				734B6783255424B50012F5CF /* FPSCounter.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +329,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BlogShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +350,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BlogShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,6 +414,14 @@
 				minimumVersion = 8.4.0;
 			};
 		};
+		734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ekazaev/ChatLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -387,6 +439,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 730478F5241D5A73002AFD82 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		734B676F2553E7B10012F5CF /* ChatLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */;
+			productName = ChatLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ChatLayout",
+        "repositoryURL": "https://github.com/ekazaev/ChatLayout",
+        "state": {
+          "branch": null,
+          "revision": "89249b6a4e8c56d877384ef748d8f08164a3af9e",
+          "version": "0.5.1"
+        }
+      },
+      {
         "package": "LBTATools",
         "repositoryURL": "https://github.com/bhlvoong/LBTATools.git",
         "state": {
