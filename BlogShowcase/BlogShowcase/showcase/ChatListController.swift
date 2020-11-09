@@ -40,6 +40,10 @@ class ChatListController: UIViewController {
     var isPaginating = false
     var isDonePaginating = false
 
+    var isUserInitiatedScrolling: Bool {
+        return collectionView.isDragging || collectionView.isDecelerating
+    }
+
     fileprivate func fetchSamleData() {
         let urlString = "https://itunes.apple.com/search?term=IU&offset=0&limit=20"
         Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: SearchResult?, err) in
@@ -82,8 +86,30 @@ class ChatListController: UIViewController {
         super.viewDidDisappear(animated)
         FPSCounter.hide()
     }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let positionSnapshot = chatLayout.getContentOffsetSnapshot(from: .bottom)
+        coordinator.animate { _ in
+            // nicer transition behaviour
+            self.collectionView.performBatchUpdates({})
+        } completion: { _ in
+            if let positionSnapshot = positionSnapshot,
+               !self.isUserInitiatedScrolling {
+                // As contentInsets may change when size transition has already started.
+                // For example, `UINavigationBar` height may change
+                // to compact and back. `ChatLayout` may not properly predict the final position of the element.
+                // So we try
+                // to restore it after the rotation manually.
+                self.chatLayout.restoreContentOffset(with: positionSnapshot)
+            }
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
+
+        super.viewWillTransition(to: size, with: coordinator)
+    }
 }
 
+// MARK: - UICollectionViewDataSource
 extension ChatListController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -110,6 +136,7 @@ extension ChatListController: UICollectionViewDataSource {
 }
 
 
+// MARK: - UIScrollViewDelegate
 extension ChatListController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y <= -scrollView.adjustedContentInset.top + scrollView.bounds.height {

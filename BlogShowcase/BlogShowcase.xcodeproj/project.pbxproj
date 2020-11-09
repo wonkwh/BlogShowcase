@@ -18,20 +18,22 @@
 		730478FB241D5CE2002AFD82 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730478FA241D5CE2002AFD82 /* ListController.swift */; };
 		734B67702553E7B10012F5CF /* ChatLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 734B676F2553E7B10012F5CF /* ChatLayout */; };
 		734B67732553E90D0012F5CF /* ChatListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B67722553E90D0012F5CF /* ChatListController.swift */; };
-		734B677F255408080012F5CF /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
-		734B6780255408080012F5CF /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		734B6783255424B50012F5CF /* FPSCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B6782255424B50012F5CF /* FPSCounter.swift */; };
 		734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B6784255425330012F5CF /* FPSStatusBarViewController.swift */; };
+		735643D825596F3900938B0D /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643D725596F3900938B0D /* ListCell.swift */; };
+		735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643D925596F8000938B0D /* LoadingFooter.swift */; };
+		735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
+		735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		734B6781255408080012F5CF /* Embed Frameworks */ = {
+		735643DE255970CC00938B0D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				734B6780255408080012F5CF /* WoodPeckeriOS.framework in Embed Frameworks */,
+				735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +53,8 @@
 		734B677C255407D40012F5CF /* WoodPeckeriOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WoodPeckeriOS.framework; sourceTree = "<group>"; };
 		734B6782255424B50012F5CF /* FPSCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSCounter.swift; sourceTree = "<group>"; };
 		734B6784255425330012F5CF /* FPSStatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSStatusBarViewController.swift; sourceTree = "<group>"; };
+		735643D725596F3900938B0D /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		735643D925596F8000938B0D /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,7 @@
 				734B67702553E7B10012F5CF /* ChatLayout in Frameworks */,
 				730478F7241D5A73002AFD82 /* Nuke in Frameworks */,
 				730478EF241D5495002AFD82 /* ShowcaseKit in Frameworks */,
-				734B677F255408080012F5CF /* WoodPeckeriOS.framework in Frameworks */,
+				735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */,
 				730478F4241D571F002AFD82 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,9 +76,9 @@
 		730478CD241D5466002AFD82 = {
 			isa = PBXGroup;
 			children = (
-				734B677C255407D40012F5CF /* WoodPeckeriOS.framework */,
 				730478D8241D5466002AFD82 /* BlogShowcase */,
 				730478D7241D5466002AFD82 /* Products */,
+				735643DB255970CC00938B0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,18 +93,52 @@
 		730478D8241D5466002AFD82 /* BlogShowcase */ = {
 			isa = PBXGroup;
 			children = (
-				734B6784255425330012F5CF /* FPSStatusBarViewController.swift */,
-				734B6782255424B50012F5CF /* FPSCounter.swift */,
+				735643D525596EDD00938B0D /* showcase */,
+				73FE0C372559417A00E6DD39 /* helper */,
 				730478D9241D5466002AFD82 /* AppDelegate.swift */,
+				730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */,
+				735643D625596F0800938B0D /* SupportFile */,
+			);
+			path = BlogShowcase;
+			sourceTree = "<group>";
+		};
+		735643D525596EDD00938B0D /* showcase */ = {
+			isa = PBXGroup;
+			children = (
+				730478FA241D5CE2002AFD82 /* ListController.swift */,
+				734B67722553E90D0012F5CF /* ChatListController.swift */,
+				735643D725596F3900938B0D /* ListCell.swift */,
+				735643D925596F8000938B0D /* LoadingFooter.swift */,
+			);
+			path = showcase;
+			sourceTree = "<group>";
+		};
+		735643D625596F0800938B0D /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				734B677C255407D40012F5CF /* WoodPeckeriOS.framework */,
 				730478E2241D5467002AFD82 /* Assets.xcassets */,
 				730478E4241D5467002AFD82 /* LaunchScreen.storyboard */,
 				730478E7241D5467002AFD82 /* Info.plist */,
-				730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */,
-				730478F8241D5B48002AFD82 /* Service.swift */,
-				730478FA241D5CE2002AFD82 /* ListController.swift */,
-				734B67722553E90D0012F5CF /* ChatListController.swift */,
 			);
-			path = BlogShowcase;
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		735643DB255970CC00938B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73FE0C372559417A00E6DD39 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				730478F8241D5B48002AFD82 /* Service.swift */,
+				734B6784255425330012F5CF /* FPSStatusBarViewController.swift */,
+				734B6782255424B50012F5CF /* FPSCounter.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +151,7 @@
 				730478D2241D5466002AFD82 /* Sources */,
 				730478D3241D5466002AFD82 /* Frameworks */,
 				730478D4241D5466002AFD82 /* Resources */,
-				734B6781255408080012F5CF /* Embed Frameworks */,
+				735643DE255970CC00938B0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,10 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
+				735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
 				734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */,
 				734B67732553E90D0012F5CF /* ChatListController.swift in Sources */,
+				735643D825596F3900938B0D /* ListCell.swift in Sources */,
 				734B6783255424B50012F5CF /* FPSCounter.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
 			);
@@ -332,8 +372,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BlogShowcase/SupportFile",
 				);
-				INFOPLIST_FILE = BlogShowcase/Info.plist;
+				INFOPLIST_FILE = BlogShowcase/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,8 +394,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BlogShowcase/SupportFile",
 				);
-				INFOPLIST_FILE = BlogShowcase/Info.plist;
+				INFOPLIST_FILE = BlogShowcase/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
