@@ -15,6 +15,12 @@ class ShowcaseViewData: Showcase {
     }
 }
 
+class ShowcaseEnumDrivenList: Showcase {
+    func makeViewController() -> UIViewController {
+        return EnumListController(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+}
+
 class ShowcaseChatLayout: Showcase {
     func makeViewController() -> UIViewController {
         return ChatListController()

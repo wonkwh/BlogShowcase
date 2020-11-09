@@ -24,6 +24,7 @@
 		735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643D925596F8000938B0D /* LoadingFooter.swift */; };
 		735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
 		735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		735643E02559722E00938B0D /* EnumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643DF2559722E00938B0D /* EnumListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		734B6784255425330012F5CF /* FPSStatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPSStatusBarViewController.swift; sourceTree = "<group>"; };
 		735643D725596F3900938B0D /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		735643D925596F8000938B0D /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
+		735643DF2559722E00938B0D /* EnumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				734B67722553E90D0012F5CF /* ChatListController.swift */,
 				735643D725596F3900938B0D /* ListCell.swift */,
 				735643D925596F8000938B0D /* LoadingFooter.swift */,
+				735643DF2559722E00938B0D /* EnumListController.swift */,
 			);
 			path = showcase;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
 				734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */,
 				734B67732553E90D0012F5CF /* ChatListController.swift in Sources */,
+				735643E02559722E00938B0D /* EnumListController.swift in Sources */,
 				735643D825596F3900938B0D /* ListCell.swift in Sources */,
 				734B6783255424B50012F5CF /* FPSCounter.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
