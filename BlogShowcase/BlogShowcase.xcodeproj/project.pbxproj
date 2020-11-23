@@ -25,6 +25,8 @@
 		735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
 		735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		735643E02559722E00938B0D /* EnumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643DF2559722E00938B0D /* EnumListController.swift */; };
+		89350411256BFF5200B0ADE0 /* DynamicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350410256BFF5200B0ADE0 /* DynamicListView.swift */; };
+		89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +59,8 @@
 		735643D725596F3900938B0D /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		735643D925596F8000938B0D /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 		735643DF2559722E00938B0D /* EnumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListController.swift; sourceTree = "<group>"; };
+		89350410256BFF5200B0ADE0 /* DynamicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListView.swift; sourceTree = "<group>"; };
+		89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				735643D525596EDD00938B0D /* showcase */,
 				73FE0C372559417A00E6DD39 /* helper */,
+				8935040F256BFF3B00B0ADE0 /* SwiftUI */,
 				730478D9241D5466002AFD82 /* AppDelegate.swift */,
 				730478F0241D54D4002AFD82 /* ShowcaseViewData.swift */,
 				735643D625596F0800938B0D /* SupportFile */,
@@ -142,6 +147,15 @@
 				734B6782255424B50012F5CF /* FPSCounter.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		8935040F256BFF3B00B0ADE0 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				89350410256BFF5200B0ADE0 /* DynamicListView.swift */,
+				89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,8 @@
 				735643D825596F3900938B0D /* ListCell.swift in Sources */,
 				734B6783255424B50012F5CF /* FPSCounter.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
+				89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */,
+				89350411256BFF5200B0ADE0 /* DynamicListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
