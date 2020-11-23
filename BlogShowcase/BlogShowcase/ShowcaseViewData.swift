@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import ShowcaseKit
 
 class ShowcaseViewData: Showcase {
@@ -27,8 +28,18 @@ class ShowcaseChatLayout: Showcase {
     }
 }
 
+class ShowcaseSwiftUIDynamicList: Showcase {
+    func makeViewController() -> UIViewController {
+        let view = DynamicsListView()
+        let vc = UIHostingController(rootView: view)
+        return vc
+    }
+}
 
-
-
-
-
+class ShowcaseSwiftUIFacebookLayout: Showcase {
+    func makeViewController() -> UIViewController {
+        let view = FacebookLayoutView()
+        let vc = UIHostingController(rootView: view)
+        return vc
+    }
+}

@@ -94,7 +94,10 @@ struct FacebookLayoutView: View {
         NavigationView {
             List {
                 VStack (alignment: .leading) {
-                    Text("Trending").font(.headline).padding(.leading, 16).padding(.bottom, 4)
+                    Text("Trending")
+                        .font(.headline)
+                        .padding(.leading, 16)
+                        .padding(.bottom, 4)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(Group.sampleGroups, id: \.imageName) { group in
