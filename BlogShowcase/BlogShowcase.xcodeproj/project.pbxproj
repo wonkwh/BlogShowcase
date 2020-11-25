@@ -25,6 +25,7 @@
 		735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
 		735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		735643E02559722E00938B0D /* EnumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643DF2559722E00938B0D /* EnumListController.swift */; };
+		736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */; };
 		89350411256BFF5200B0ADE0 /* DynamicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350410256BFF5200B0ADE0 /* DynamicListView.swift */; };
 		89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		735643D725596F3900938B0D /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		735643D925596F8000938B0D /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 		735643DF2559722E00938B0D /* EnumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListController.swift; sourceTree = "<group>"; };
+		736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackLaysoutChildrenView.swift; sourceTree = "<group>"; };
 		89350410256BFF5200B0ADE0 /* DynamicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListView.swift; sourceTree = "<group>"; };
 		89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 			children = (
 				89350410256BFF5200B0ADE0 /* DynamicListView.swift */,
 				89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */,
+				736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */,
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
 				735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
