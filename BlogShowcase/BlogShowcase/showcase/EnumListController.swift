@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum State {
+enum DataState {
     case loading
     case paging([Result])
     case populated([Result])
@@ -32,7 +32,7 @@ class EnumListController: UICollectionViewController, UICollectionViewDelegateFl
     fileprivate let cellId = "cellId"
     fileprivate let footerId = "footerId"
 
-    var state = State.loading {
+    var state = DataState.loading {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()

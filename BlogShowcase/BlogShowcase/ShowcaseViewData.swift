@@ -43,3 +43,11 @@ class ShowcaseSwiftUIFacebookLayout: Showcase {
         return vc
     }
 }
+
+class ShowcaseSwiftUICustomViewModifiers: Showcase {
+    func makeViewController() -> UIViewController {
+        let view = ModifierStackView()
+        let vc = UIHostingController(rootView: view)
+        return vc
+    }
+}

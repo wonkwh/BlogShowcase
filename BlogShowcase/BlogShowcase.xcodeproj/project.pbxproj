@@ -28,6 +28,7 @@
 		736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */; };
 		89350411256BFF5200B0ADE0 /* DynamicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350410256BFF5200B0ADE0 /* DynamicListView.swift */; };
 		89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */; };
+		8960C1A3256FEAEC004963B3 /* CustomViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +64,7 @@
 		736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackLaysoutChildrenView.swift; sourceTree = "<group>"; };
 		89350410256BFF5200B0ADE0 /* DynamicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListView.swift; sourceTree = "<group>"; };
 		89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLayoutView.swift; sourceTree = "<group>"; };
+		8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				89350410256BFF5200B0ADE0 /* DynamicListView.swift */,
 				89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */,
 				736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */,
+				8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = wonkwh;
 				TargetAttributes = {
 					730478D5241D5466002AFD82 = {
@@ -249,6 +252,7 @@
 				735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
+				8960C1A3256FEAEC004963B3 /* CustomViewModifiers.swift in Sources */,
 				734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */,
 				734B67732553E90D0012F5CF /* ChatListController.swift in Sources */,
 				735643E02559722E00938B0D /* EnumListController.swift in Sources */,
@@ -300,6 +304,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -360,6 +365,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -399,6 +405,7 @@
 					"$(PROJECT_DIR)/BlogShowcase/SupportFile",
 				);
 				INFOPLIST_FILE = BlogShowcase/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,6 +428,7 @@
 					"$(PROJECT_DIR)/BlogShowcase/SupportFile",
 				);
 				INFOPLIST_FILE = BlogShowcase/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
