@@ -31,6 +31,7 @@
 		F7274FD426B94A95004CFB37 /* TagCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7274FD326B94A95004CFB37 /* TagCloudView.swift */; };
 		F789769526E1FC0000882552 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789769426E1FC0000882552 /* CheckView.swift */; };
 		F789769826E1FD5500882552 /* ButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789769726E1FD5500882552 /* ButtonAnimationView.swift */; };
+		F789769A26E2058700882552 /* BootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789769926E2058700882552 /* BootView.swift */; };
 		F793B81125B04375000F3665 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = F793B81025B04375000F3665 /* Gifu */; };
 		F793B81425B0438C000F3665 /* TikTokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81325B0438C000F3665 /* TikTokController.swift */; };
 		F793B81825B04405000F3665 /* VideoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81725B04405000F3665 /* VideoTableCell.swift */; };
@@ -67,6 +68,7 @@
 		F7274FD326B94A95004CFB37 /* TagCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCloudView.swift; sourceTree = "<group>"; };
 		F789769426E1FC0000882552 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		F789769726E1FD5500882552 /* ButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimationView.swift; sourceTree = "<group>"; };
+		F789769926E2058700882552 /* BootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootView.swift; sourceTree = "<group>"; };
 		F793B81325B0438C000F3665 /* TikTokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokController.swift; sourceTree = "<group>"; };
 		F793B81725B04405000F3665 /* VideoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableCell.swift; sourceTree = "<group>"; };
 		F793B81B25B04446000F3665 /* TemporaryVideoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryVideoStorage.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				F789769426E1FC0000882552 /* CheckView.swift */,
 				F789769726E1FD5500882552 /* ButtonAnimationView.swift */,
+				F789769926E2058700882552 /* BootView.swift */,
 			);
 			path = AnimationCheckButton;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F789769A26E2058700882552 /* BootView.swift in Sources */,
 				736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */,
 				F7BE7A9425AF10FC00F28F18 /* CustomTabBar.swift in Sources */,
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
