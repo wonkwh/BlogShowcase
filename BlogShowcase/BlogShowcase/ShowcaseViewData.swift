@@ -28,6 +28,12 @@ class ShowcaseChatLayout: Showcase {
     }
 }
 
+class ShowcaseTiktokClone: Showcase {
+    func makeViewController() -> UIViewController {
+        return TikTokController()
+    }
+}
+
 class ShowcaseSwiftUIDynamicList: Showcase {
     func makeViewController() -> UIViewController {
         let view = DynamicsListView()
@@ -51,3 +57,22 @@ class ShowcaseSwiftUICustomViewModifiers: Showcase {
         return vc
     }
 }
+
+class ShowcaseSwiftUIViewModifiers2: Showcase {
+    func makeViewController() -> UIViewController {
+        let view = ModifierStackView()
+        let vc = UIHostingController(rootView: view)
+        return vc
+    }
+}
+
+class ShowcaseButtonAnimationView: Showcase {
+    func makeViewController() -> UIViewController {
+//      if #available(iOS 14.0, *) {
+        let view = ButtonAnimationView()
+        let vc = UIHostingController(rootView: view)
+        return vc
+//      }
+    }
+}
+

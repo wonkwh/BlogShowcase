@@ -22,28 +22,26 @@
 		734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734B6784255425330012F5CF /* FPSStatusBarViewController.swift */; };
 		735643D825596F3900938B0D /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643D725596F3900938B0D /* ListCell.swift */; };
 		735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643D925596F8000938B0D /* LoadingFooter.swift */; };
-		735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; };
-		735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734B677C255407D40012F5CF /* WoodPeckeriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		735643E02559722E00938B0D /* EnumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735643DF2559722E00938B0D /* EnumListController.swift */; };
 		736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */; };
 		89350411256BFF5200B0ADE0 /* DynamicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350410256BFF5200B0ADE0 /* DynamicListView.swift */; };
 		89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */; };
 		8960C1A3256FEAEC004963B3 /* CustomViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */; };
+		F7274FD226B9272F004CFB37 /* AnotherCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7274FD126B9272F004CFB37 /* AnotherCustomView.swift */; };
+		F7274FD426B94A95004CFB37 /* TagCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7274FD326B94A95004CFB37 /* TagCloudView.swift */; };
+		F789769526E1FC0000882552 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789769426E1FC0000882552 /* CheckView.swift */; };
+		F789769826E1FD5500882552 /* ButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789769726E1FD5500882552 /* ButtonAnimationView.swift */; };
+		F793B81125B04375000F3665 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = F793B81025B04375000F3665 /* Gifu */; };
+		F793B81425B0438C000F3665 /* TikTokController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81325B0438C000F3665 /* TikTokController.swift */; };
+		F793B81825B04405000F3665 /* VideoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81725B04405000F3665 /* VideoTableCell.swift */; };
+		F793B81C25B04446000F3665 /* TemporaryVideoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81B25B04446000F3665 /* TemporaryVideoStorage.swift */; };
+		F793B82025B045A4000F3665 /* Mp4Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793B81F25B045A4000F3665 /* Mp4Decoder.swift */; };
+		F79E9D74268D9FC000FE2BD1 /* NativeAdMobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9D73268D9FC000FE2BD1 /* NativeAdMobView.swift */; };
+		F79E9D77268DAA3600FE2BD1 /* ReelsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9D76268DAA3600FE2BD1 /* ReelsFeedView.swift */; };
+		F79E9D7A268DAA5F00FE2BD1 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9D79268DAA5F00FE2BD1 /* VideoModel.swift */; };
+		F7BE7A9425AF10FC00F28F18 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A9325AF10FC00F28F18 /* CustomTabBar.swift */; };
+		F7BE7A9725AF182600F28F18 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7A9625AF182600F28F18 /* TabController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		735643DE255970CC00938B0D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				735643DD255970CC00938B0D /* WoodPeckeriOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		730478D6241D5466002AFD82 /* BlogShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +63,19 @@
 		89350410256BFF5200B0ADE0 /* DynamicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListView.swift; sourceTree = "<group>"; };
 		89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLayoutView.swift; sourceTree = "<group>"; };
 		8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifiers.swift; sourceTree = "<group>"; };
+		F7274FD126B9272F004CFB37 /* AnotherCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherCustomView.swift; sourceTree = "<group>"; };
+		F7274FD326B94A95004CFB37 /* TagCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCloudView.swift; sourceTree = "<group>"; };
+		F789769426E1FC0000882552 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		F789769726E1FD5500882552 /* ButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimationView.swift; sourceTree = "<group>"; };
+		F793B81325B0438C000F3665 /* TikTokController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokController.swift; sourceTree = "<group>"; };
+		F793B81725B04405000F3665 /* VideoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableCell.swift; sourceTree = "<group>"; };
+		F793B81B25B04446000F3665 /* TemporaryVideoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryVideoStorage.swift; sourceTree = "<group>"; };
+		F793B81F25B045A4000F3665 /* Mp4Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp4Decoder.swift; sourceTree = "<group>"; };
+		F79E9D73268D9FC000FE2BD1 /* NativeAdMobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdMobView.swift; sourceTree = "<group>"; };
+		F79E9D76268DAA3600FE2BD1 /* ReelsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsFeedView.swift; sourceTree = "<group>"; };
+		F79E9D79268DAA5F00FE2BD1 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		F7BE7A9325AF10FC00F28F18 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		F7BE7A9625AF182600F28F18 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +86,7 @@
 				734B67702553E7B10012F5CF /* ChatLayout in Frameworks */,
 				730478F7241D5A73002AFD82 /* Nuke in Frameworks */,
 				730478EF241D5495002AFD82 /* ShowcaseKit in Frameworks */,
-				735643DC255970CC00938B0D /* WoodPeckeriOS.framework in Frameworks */,
+				F793B81125B04375000F3665 /* Gifu in Frameworks */,
 				730478F4241D571F002AFD82 /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,11 +127,13 @@
 		735643D525596EDD00938B0D /* showcase */ = {
 			isa = PBXGroup;
 			children = (
+				F793B81625B043B1000F3665 /* TikTokClone */,
 				730478FA241D5CE2002AFD82 /* ListController.swift */,
 				734B67722553E90D0012F5CF /* ChatListController.swift */,
 				735643D725596F3900938B0D /* ListCell.swift */,
 				735643D925596F8000938B0D /* LoadingFooter.swift */,
 				735643DF2559722E00938B0D /* EnumListController.swift */,
+				F7BE7A9625AF182600F28F18 /* TabController.swift */,
 			);
 			path = showcase;
 			sourceTree = "<group>";
@@ -156,12 +169,55 @@
 		8935040F256BFF3B00B0ADE0 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F789769626E1FD3A00882552 /* AnimationCheckButton */,
+				F79E9D75268DAA0300FE2BD1 /* ReelsDemo */,
 				89350410256BFF5200B0ADE0 /* DynamicListView.swift */,
 				89350414256BFFFD00B0ADE0 /* FacebookLayoutView.swift */,
 				736E0D75256E4F380096A8A7 /* HStackLaysoutChildrenView.swift */,
 				8960C1A2256FEAEC004963B3 /* CustomViewModifiers.swift */,
+				F7BE7A9325AF10FC00F28F18 /* CustomTabBar.swift */,
+				F79E9D73268D9FC000FE2BD1 /* NativeAdMobView.swift */,
+				F7274FD126B9272F004CFB37 /* AnotherCustomView.swift */,
+				F7274FD326B94A95004CFB37 /* TagCloudView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		F789769626E1FD3A00882552 /* AnimationCheckButton */ = {
+			isa = PBXGroup;
+			children = (
+				F789769426E1FC0000882552 /* CheckView.swift */,
+				F789769726E1FD5500882552 /* ButtonAnimationView.swift */,
+			);
+			path = AnimationCheckButton;
+			sourceTree = "<group>";
+		};
+		F793B81625B043B1000F3665 /* TikTokClone */ = {
+			isa = PBXGroup;
+			children = (
+				F793B81325B0438C000F3665 /* TikTokController.swift */,
+				F793B81725B04405000F3665 /* VideoTableCell.swift */,
+				F793B81B25B04446000F3665 /* TemporaryVideoStorage.swift */,
+				F793B81F25B045A4000F3665 /* Mp4Decoder.swift */,
+			);
+			path = TikTokClone;
+			sourceTree = "<group>";
+		};
+		F79E9D75268DAA0300FE2BD1 /* ReelsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F79E9D78268DAA4200FE2BD1 /* Model */,
+				F79E9D76268DAA3600FE2BD1 /* ReelsFeedView.swift */,
+			);
+			path = ReelsDemo;
+			sourceTree = "<group>";
+		};
+		F79E9D78268DAA4200FE2BD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F79E9D79268DAA5F00FE2BD1 /* VideoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +230,6 @@
 				730478D2241D5466002AFD82 /* Sources */,
 				730478D3241D5466002AFD82 /* Frameworks */,
 				730478D4241D5466002AFD82 /* Resources */,
-				735643DE255970CC00938B0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +241,7 @@
 				730478F3241D571F002AFD82 /* LBTATools */,
 				730478F6241D5A73002AFD82 /* Nuke */,
 				734B676F2553E7B10012F5CF /* ChatLayout */,
+				F793B81025B04375000F3665 /* Gifu */,
 			);
 			productName = BlogShowcase;
 			productReference = 730478D6241D5466002AFD82 /* BlogShowcase.app */;
@@ -220,6 +276,7 @@
 				730478F2241D571F002AFD82 /* XCRemoteSwiftPackageReference "LBTATools" */,
 				730478F5241D5A73002AFD82 /* XCRemoteSwiftPackageReference "Nuke" */,
 				734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */,
+				F793B80F25B04375000F3665 /* XCRemoteSwiftPackageReference "Gifu" */,
 			);
 			productRefGroup = 730478D7241D5466002AFD82 /* Products */;
 			projectDirPath = "";
@@ -248,15 +305,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				736E0D76256E4F380096A8A7 /* HStackLaysoutChildrenView.swift in Sources */,
+				F7BE7A9425AF10FC00F28F18 /* CustomTabBar.swift in Sources */,
 				730478F9241D5B48002AFD82 /* Service.swift in Sources */,
 				735643DA25596F8000938B0D /* LoadingFooter.swift in Sources */,
+				F79E9D77268DAA3600FE2BD1 /* ReelsFeedView.swift in Sources */,
 				730478DA241D5466002AFD82 /* AppDelegate.swift in Sources */,
 				730478F1241D54D4002AFD82 /* ShowcaseViewData.swift in Sources */,
+				F793B82025B045A4000F3665 /* Mp4Decoder.swift in Sources */,
+				F793B81C25B04446000F3665 /* TemporaryVideoStorage.swift in Sources */,
 				8960C1A3256FEAEC004963B3 /* CustomViewModifiers.swift in Sources */,
 				734B6785255425330012F5CF /* FPSStatusBarViewController.swift in Sources */,
+				F7274FD226B9272F004CFB37 /* AnotherCustomView.swift in Sources */,
 				734B67732553E90D0012F5CF /* ChatListController.swift in Sources */,
+				F789769526E1FC0000882552 /* CheckView.swift in Sources */,
+				F789769826E1FD5500882552 /* ButtonAnimationView.swift in Sources */,
+				F7BE7A9725AF182600F28F18 /* TabController.swift in Sources */,
+				F79E9D74268D9FC000FE2BD1 /* NativeAdMobView.swift in Sources */,
+				F793B81825B04405000F3665 /* VideoTableCell.swift in Sources */,
 				735643E02559722E00938B0D /* EnumListController.swift in Sources */,
 				735643D825596F3900938B0D /* ListCell.swift in Sources */,
+				F7274FD426B94A95004CFB37 /* TagCloudView.swift in Sources */,
+				F793B81425B0438C000F3665 /* TikTokController.swift in Sources */,
+				F79E9D7A268DAA5F00FE2BD1 /* VideoModel.swift in Sources */,
 				734B6783255424B50012F5CF /* FPSCounter.swift in Sources */,
 				730478FB241D5CE2002AFD82 /* ListController.swift in Sources */,
 				89350415256BFFFD00B0ADE0 /* FacebookLayoutView.swift in Sources */,
@@ -485,7 +555,7 @@
 			repositoryURL = "https://github.com/kean/Nuke.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.4.0;
+				minimumVersion = 9.0.0;
 			};
 		};
 		734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */ = {
@@ -494,6 +564,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.5.1;
+			};
+		};
+		F793B80F25B04375000F3665 /* XCRemoteSwiftPackageReference "Gifu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kaishin/Gifu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -518,6 +596,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 734B676E2553E7B10012F5CF /* XCRemoteSwiftPackageReference "ChatLayout" */;
 			productName = ChatLayout;
+		};
+		F793B81025B04375000F3665 /* Gifu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F793B80F25B04375000F3665 /* XCRemoteSwiftPackageReference "Gifu" */;
+			productName = Gifu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
