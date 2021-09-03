@@ -13,5 +13,8 @@ struct ThreeColumnNavigationApp: App {
         WindowGroup {
             ContentView()
         }
+        .commands {
+          SidebarCommands()
+        }
     }
 }

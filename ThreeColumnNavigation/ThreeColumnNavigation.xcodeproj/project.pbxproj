@@ -42,6 +42,7 @@
 		F72B54F126A6B3380046FB98 /* ThreeColumnNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnNavigationTests.swift; sourceTree = "<group>"; };
 		F72B54F726A6B3380046FB98 /* ThreeColumnNavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeColumnNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72B54FB26A6B3380046FB98 /* ThreeColumnNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnNavigationUITests.swift; sourceTree = "<group>"; };
+		F72B550826A6B3AC0046FB98 /* ThreeColumnNavigation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThreeColumnNavigation.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		F72B54DF26A6B3350046FB98 /* ThreeColumnNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				F72B550826A6B3AC0046FB98 /* ThreeColumnNavigation.entitlements */,
 				F72B54E026A6B3350046FB98 /* ThreeColumnNavigationApp.swift */,
 				F72B54E226A6B3350046FB98 /* ContentView.swift */,
 				F72B54E426A6B3380046FB98 /* Assets.xcassets */,
@@ -412,9 +414,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeColumnNavigation/ThreeColumnNavigation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ThreeColumnNavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = ULAC3DUV4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,9 +434,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonkwh.ThreeColumnNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -441,9 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeColumnNavigation/ThreeColumnNavigation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ThreeColumnNavigation/Preview Content\"";
+				DEVELOPMENT_TEAM = ULAC3DUV4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -459,9 +466,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonkwh.ThreeColumnNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
