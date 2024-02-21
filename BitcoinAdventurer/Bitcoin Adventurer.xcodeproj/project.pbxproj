@@ -10,6 +10,7 @@
 		79B2EDF42B85D1B5002852D7 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 79B2EDF32B85D1B5002852D7 /* Swinject */; };
 		79B2EDF72B85D1DB002852D7 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 79B2EDF62B85D1DB002852D7 /* SwinjectAutoregistration */; };
 		79B2EDFA2B85D1F1002852D7 /* SwinjectStoryboard in Frameworks */ = {isa = PBXBuildFile; productRef = 79B2EDF92B85D1F1002852D7 /* SwinjectStoryboard */; };
+		79B2EDFD2B85DE74002852D7 /* HttpNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2EDFC2B85DE74002852D7 /* HttpNetworking.swift */; };
 		8714602E1FF2FB41001F9EB5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714602D1FF2FB41001F9EB5 /* Endpoint.swift */; };
 		8738EDC11FE59A31000CBC22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8738EDC01FE59A31000CBC22 /* AppDelegate.swift */; };
 		8738EDC31FE59A31000CBC22 /* BitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8738EDC21FE59A31000CBC22 /* BitcoinViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79B2EDFC2B85DE74002852D7 /* HttpNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworking.swift; sourceTree = "<group>"; };
 		8714602D1FF2FB41001F9EB5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Model/Endpoint.swift; sourceTree = "<group>"; };
 		8738EDBD1FE59A31000CBC22 /* Bitcoin Adventurer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Adventurer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8738EDC01FE59A31000CBC22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B2EDFB2B85DE40002852D7 /* Dependancies */ = {
+			isa = PBXGroup;
+			children = (
+				79B2EDFC2B85DE74002852D7 /* HttpNetworking.swift */,
+			);
+			path = Dependancies;
+			sourceTree = "<group>";
+		};
 		8738EDB41FE59A31000CBC22 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		8738EDBF1FE59A31000CBC22 /* Bitcoin Adventurer */ = {
 			isa = PBXGroup;
 			children = (
+				79B2EDFB2B85DE40002852D7 /* Dependancies */,
 				8738EDC01FE59A31000CBC22 /* AppDelegate.swift */,
 				8738EDCC1FE59A31000CBC22 /* Info.plist */,
 				87CED55C1FE7540300C4D66E /* Storyboard */,
@@ -292,6 +303,7 @@
 				87CED5631FE7550B00C4D66E /* Error.swift in Sources */,
 				8714602E1FF2FB41001F9EB5 /* Endpoint.swift in Sources */,
 				87CED55F1FE754A900C4D66E /* Price.swift in Sources */,
+				79B2EDFD2B85DE74002852D7 /* HttpNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

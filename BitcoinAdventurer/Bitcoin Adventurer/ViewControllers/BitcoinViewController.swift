@@ -34,6 +34,8 @@ internal class BitcoinViewController: UIViewController {
   @IBOutlet weak private var primary: UILabel!
   @IBOutlet weak private var partial: UILabel!
   
+  let networking = HTTPNetworking()
+
   private let dollarsDisplayFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.maximumFractionDigits = 0
@@ -67,37 +69,21 @@ internal class BitcoinViewController: UIViewController {
   }
   
   private func requestPrice()  {
-    let bitcoin = Coinbase.bitcoin.path
-    
-    // 1. Make URL request
-    guard let url = URL(string: bitcoin) else { return }
-    var request = URLRequest(url: url)
-    request.cachePolicy = .reloadIgnoringCacheData
-    
-    // 2. Make networking request
-    let task = URLSession.shared.dataTask(with: request) { data, _, error in
-      
-      // 3. Check for errors
-      if let error = error {
-        print("Error received requesting Bitcoin price: \(error.localizedDescription)")
-        return
-      }
-      
-      // 4. Parse the returned information
-      let decoder = JSONDecoder()
+    networking.request(from: Coinbase.bitcoin) { result in
+      switch result {
+      case .success(let data):
+        // 4. Parse the returned information
+        let decoder = JSONDecoder()
+        guard let response = try? decoder.decode(PriceResponse.self, from: data) else { return }
+        print("Price returned: \(response.data.amount)")
 
-      guard let data = data,
-            let response = try? decoder.decode(PriceResponse.self,
-                                               from: data) else { return }
-      
-      print("Price returned: \(response.data.amount)")
-      
-      // 5. Update the UI with the parsed PriceResponse
-      DispatchQueue.main.async { [weak self] in
-        self?.updateLabel(price: response.data)
+        // 5. Update the UI with the parsed PriceResponse
+        DispatchQueue.main.async { [weak self] in
+          self?.updateLabel(price: response.data)
+        }
+      case .failure(let error):
+        debugPrint(error.localizedDescription)
       }
     }
-
-    task.resume()
   }
 }
