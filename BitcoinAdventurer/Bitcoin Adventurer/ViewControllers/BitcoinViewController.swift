@@ -27,6 +27,20 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Swinject
+import SwinjectStoryboard
+import SwinjectAutoregistration
+
+extension SwinjectStoryboard {
+   @objc class func setup() {
+     defaultContainer.autoregister(Networking.self, initializer: HTTPNetworking.init)
+     defaultContainer.autoregister(PriceFetcher.self, initializer: BitcoinPriceFetcher.init)
+
+     defaultContainer.storyboardInitCompleted(BitcoinViewController.self) { resolver, controller in
+       controller.fetcher = resolver.resolve(PriceFetcher.self)
+     }
+   }
+}
 
 internal class BitcoinViewController: UIViewController {
   
@@ -34,7 +48,7 @@ internal class BitcoinViewController: UIViewController {
   @IBOutlet weak private var primary: UILabel!
   @IBOutlet weak private var partial: UILabel!
   
-  let fetcher = BitcoinPriceFetcher(networking: HTTPNetworking())
+  var fetcher: PriceFetcher?
 
   private let dollarsDisplayFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
@@ -69,6 +83,7 @@ internal class BitcoinViewController: UIViewController {
   }
   
   private func requestPrice() {
+    guard let fetcher = fetcher else { fatalError("Missing dependancies") }
     fetcher.fetch { response in
       guard let response = response else { return }
 
