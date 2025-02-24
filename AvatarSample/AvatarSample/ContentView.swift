@@ -17,6 +17,7 @@ struct ContentView: View {
           .aspectRatio(contentMode: .fill)
           .frame(width: 75, height: 75, alignment: .center)
           .clipShape(.circle)
+          .accessibilityLabel(person.fullName)
 
         VStack(alignment: .leading) {
           Text(person.fullName)
@@ -27,6 +28,8 @@ struct ContentView: View {
             .font(.subheadline)
         }
       }
+      .accessibilityElement(children: .contain)
+      .accessibilityLabel(person.fullName)
     }
   }
 }
