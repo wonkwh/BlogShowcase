@@ -1,3 +1,12 @@
+//
+//  ChartView.swift
+//  HubSwiftUI
+//
+//  Created by ncn on 2/25/25.
+//
+
+import SwiftUI
+
 struct ChartView: View {
   var body: some View {
     VStack {

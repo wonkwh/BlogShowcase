@@ -1,3 +1,12 @@
+//
+//  TitleView.swift
+//  HubSwiftUI
+//
+//  Created by ncn on 2/25/25.
+//
+
+import SwiftUI
+
 struct TitleView: View {
   @State var driveInfoTextColor: Color = .mainBlue
   @State var gSensorTextColor: Color = .iconDark
@@ -32,6 +41,9 @@ struct TitleView: View {
       // X mark sfsymbol
       Image(systemName: "xmark.circle.fill")
         .foregroundColor(.iconDark)
+        .onTapGesture {
+          print("X mark tapped")
+        }
     }
   }
 }

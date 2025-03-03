@@ -12,6 +12,7 @@ struct Person: Identifiable {
   var fullName: String
   var jobtitle: String
   var affiliation: String
+  var isParticipant = false
 
   var profileImageName: String {
     fullName.lowercased().replacingOccurrences(of: " ", with: "-")
@@ -22,7 +23,7 @@ struct Person: Identifiable {
 // sample data
 extension Person {
   static var samples: [Person] = [
-    .init(fullName: "Peter Friese", jobtitle: "Senior Developer Advocate", affiliation: "Google"),
+    .init(fullName: "Peter Friese", jobtitle: "Senior Developer Advocate", affiliation: "Google", isParticipant: true),
     .init(fullName: "Alex Kudelka", jobtitle: "Co-Founder & CRO", affiliation: "Glassfy"),
     .init(fullName: "Allison Mcentire", jobtitle: "Software Engineer", affiliation: "URBN"),
     .init(fullName: "Anum Mian", jobtitle: "iOS Developer", affiliation: "The Guardian"),
